@@ -1,46 +1,31 @@
-:root {
-    --primary-color: darkblue;
-    --secondary-color: #eee;
-    --text-color: #333;
-    --border-color: black;
-    --shadow-color: gray;
-    --footer-border: #000;
-    --nav-link-color: white;
-    --aside-border: rgb(0, 0, 0 / 0.2);
 
-    --main-width: 840px;
-    --aside-width: 20rem;
-    --aside-padding: 1rem;
-    --main-img-width: 150px;
-    --aside-img-width: 200px;
-    --footer-margin: 15px;
-    --nav-padding: 10px;
-    --nav-link-padding: 20px;
-    --img-padding: 2px;
-}
-
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
 nav {
-    background-color: var(--primary-color);
-    padding: var(--nav-padding);
+    background-color: darkblue;
+    padding: 10px;
 }
 
 nav a {
-    color: var(--nav-link-color);
+    color: white;
     display: block;
-    padding: var(--nav-link-padding);
+    padding: 20px;
 }
 
 h1 {
-    color: var(--primary-color);
+    color: darkblue;
 }
 
-main img {
-    width: var(--main-img-width);
+ img {
+    width: 150px;
     height: auto;
-    border: 1px solid var(--border-color);
-    padding: var(--img-padding);
-    box-shadow: 0 0 30px var(--shadow-color);
+    border: 1px solid black;
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
 }
 
 p {
@@ -48,32 +33,50 @@ p {
 }
 
 main {
-    max-width: var(--main-width);
+    max-width: 840px;
 }
 
 aside {
-    width: var(--aside-width);
-    margin: var(--aside-padding);
-    border: 1px solid var(--aside-border);
-    padding: var(--aside-padding);
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    position: relative;
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid rgb(0, 0, 0 / 0.2);
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
     text-align: center;
 
 }
 
 aside img {
-    width: var(--aside-img-width);
+    width: 200px;
     height: auto;
 }
 
- img {
-    width: 150%;
+aside h2 {
+    position: absolute;
+    top: 47px;
+    left: 150px;
+}
+
+main img {
+    
     height: auto;
+    float: right;
 }
 
 footer {
-    margin-top: var(--footer-margin);
-    border-top: 1px solid var(--footer-border);
+    margin-top: 15px;
+    border-top: 1px solid #000;
     text-align: center;
+}
+
+/* Class Selector */
+
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    background-color: #000;
+    color: #ddd;
 }
