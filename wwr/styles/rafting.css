@@ -105,7 +105,7 @@ article {
 
 .awaits img {
     display: inline-block;
-    margin: 0 5px; /* optional: adds space between images */
+    margin: 0 5px; 
     width: 140px;
     height: auto;
     object-fit: cover;
