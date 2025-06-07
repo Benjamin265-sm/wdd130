@@ -5,11 +5,12 @@
     --accent2-color: #33496D;
     --heading-font: "Merriweather", sans-serif;
     --body-font: "Lato", sans-serif;
+    --accent2-color-opc:rgba(51, 73, 109, 0.75);
 }
 
+
 * {
-    margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
 }
 
@@ -21,13 +22,14 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 200px auto;
     align-items: center;
+
 
 }
 
 header, main, footer {
-    width: 840px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -47,18 +49,7 @@ h1, h2 {
 
 }
 
-section {
-    text-align: center;
-}
-
-
-
-nav, p, section, article {
-    margin: 16px;
-    padding: 8PX;
-}
-
-.socialmedia a {
+a {
     text-decoration: none;
 }
 
@@ -79,16 +70,22 @@ h1 {
     width: 100%;
     padding: 16px;
     text-align: center;
-    opacity: 0.7;
-    background-color: var(--accent2-color);
+    background-color: var(--accent2-color-opc);
     color: #fff;
 }
 
 article {
     position: absolute;
-    top: 100px;
+    top: 150px;
     left: 50%;
+    transform: translatex(-50%);
     text-align: left;
+    background-color: var(--accent2-color-opc);
+
+}
+
+article p {
+    color: #fff;
 }
 
 .hero article img {
@@ -96,34 +93,35 @@ article {
     width: 125px;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin: 0 0 16px 16px;
+    padding: 1rem;
 
 }
 
 .awaits {
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
 }
 
-.awaits img {
-    display: inline-block;
-    margin: 0 5px; 
-    width: 140px;
+.awaits h2{
+    grid-column: 1/6;
+
+}
+.awaits img { 
+    width: 100%;
     height: auto;
-    object-fit: cover;
+    
 }
 
-.history-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
+.history {
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+    gap: 1em;
 }
 
-.history-text{
-    flex: 1;
-    min-width: 120px;
+.history h2 {
+    grid-column: 1/4;
 }
-
 .history-img {
     width: 100px;
     height: auto;
