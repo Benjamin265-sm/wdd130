@@ -172,16 +172,13 @@ footer p, footer a {
     width: 100px;
 }
 
-form {
+
+
+.contactform {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    margin: 16px auto;
-    padding: 16px;
-    background-color: var(--accent2-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    align-items: left;
+    gap: 16px;
 
 }
 
@@ -195,6 +192,19 @@ button {
     transition: background-color 0.3s ease;
 
 }
+
+.contactform button[type="submit"] {
+    margin-top: 12px;
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.contactform label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
 
 .send {
     text-align: center;
@@ -240,4 +250,96 @@ fieldset label{
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+}
+
+
+
+/* Employee section layout */
+.employees {
+    margin: 40px 0 0 0;
+    padding: 24px 0;
+}
+
+.employees h2 {
+    text-align: center;
+    margin-bottom: 24px;
+    grid-column: 1/-1;
+    font-size: 2rem;
+    color: var(--primary-color);
+    
+}
+
+.employees {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    align-items: start;
+    justify-items: center;
+}
+
+.employee {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 16px 12px 12px 12px;
+    text-align: center;
+    max-width: 220px;
+    width: 100%;
+    align-items: center;
+}
+
+.employee img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    border: 2px solid var(--primary-color);
+}
+
+.employee figcaption {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 8px;
+}
+
+
+.address-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    margin: 32px 0;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    padding: 24px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.address-section h2, p, a {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.address-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: var(--primary-color);
+}
+
+.address-info a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.address-map {
+    width: 100%;
+    min-height: 220px;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    border: none;
 }
